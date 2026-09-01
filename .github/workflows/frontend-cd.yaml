@@ -6,6 +6,7 @@ on:
       - main
     paths:
       - 'starter/frontend/**'
+
   workflow_dispatch:
 
 env:
@@ -15,6 +16,7 @@ env:
   REACT_APP_MOVIE_API_URL: http://localhost:5000
 
 jobs:
+
   lint:
     name: Lint Frontend
     runs-on: ubuntu-latest
@@ -39,6 +41,7 @@ jobs:
 
       - name: Run lint
         run: npm run lint
+
 
   test:
     name: Test Frontend
@@ -65,9 +68,11 @@ jobs:
       - name: Run tests
         run: npm test -- --watchAll=false
 
+
   build:
     name: Build Frontend
     runs-on: ubuntu-latest
+
     needs:
       - lint
       - test
@@ -105,9 +110,11 @@ jobs:
           docker push \
             "${{ steps.login-ecr.outputs.registry }}/${{ env.ECR_REPOSITORY }}:${{ github.sha }}"
 
+
   deploy:
     name: Deploy Frontend
     runs-on: ubuntu-latest
+
     needs: build
 
     steps:
@@ -130,9 +137,13 @@ jobs:
       - name: Install kustomize
         run: |
           curl -sSLo kustomize.tar.gz \
-            https://github.com/kubernetes-sigs/kustomize/releases/latest/download/kustomize_v5.7.1_linux_amd64.tar.gz
+            https://github.com/kubernetes-sigs/kustomize/releases/download/kustomize/v5.7.1/kustomize_v5.7.1_linux_amd64.tar.gz
+
           tar -xzf kustomize.tar.gz
+
           sudo mv kustomize /usr/local/bin/kustomize
+
+          kustomize version
 
       - name: Update frontend image
         working-directory: starter/frontend/k8s
