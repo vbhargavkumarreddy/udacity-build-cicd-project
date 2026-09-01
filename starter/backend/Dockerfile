@@ -14,13 +14,13 @@ RUN apt-get update && \
 
 RUN mkdir -p /var/www/app && mkdir /app
 
-COPY Pipfile* /app
-
-RUN cd /app && pipenv install --system --deploy
-
-COPY . /app
-
 WORKDIR /app
+
+COPY Pipfile* .
+
+RUN pipenv install --system --deploy
+
+COPY . .
 
 USER app
 
