@@ -1,4 +1,4 @@
-FROM python:3.10-slim
+FROM python:3.10-slim-bullseye
 
 RUN adduser --uid 1000 app
 
@@ -8,6 +8,7 @@ RUN apt-get update && \
     libpcre3 \
     libpcre3-dev \
     libffi-dev \
+    openssl \
     && rm -rf /var/lib/apt/lists/* && \
     pip install pipenv
 
