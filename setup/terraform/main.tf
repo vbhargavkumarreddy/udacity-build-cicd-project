@@ -146,7 +146,7 @@ resource "aws_eks_cluster" "main" {
   role_arn = aws_iam_role.eks_cluster.arn
   vpc_config {
     subnet_ids              = [aws_subnet.private_subnet.id, aws_subnet.public_subnet.id]
-    endpoint_public_access  = var.enable_private == true ? false : true
+    endpoint_public_access = var.enable_private ? false : true
     endpoint_private_access = true
   }
   depends_on = [aws_iam_role_policy_attachment.eks_cluster, aws_iam_role_policy_attachment.eks_service]
