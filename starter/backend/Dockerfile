@@ -20,6 +20,8 @@ RUN cd /app && pipenv install --system --deploy
 
 COPY . /app
 
+WORKDIR /app
+
 USER app
 
 EXPOSE 5000
