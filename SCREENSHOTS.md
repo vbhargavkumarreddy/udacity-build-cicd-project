@@ -31,7 +31,7 @@ https://github.com/vbhargavkumarreddy/udacity-build-cicd-project
 
 ### Backend Application
 
-![Backend Output](Screenshots/Backend_output.png)
+![Backend Output](Screenshots/Backened_output.png)
 
 ### Frontend Application
 
