@@ -1,4 +1,3 @@
-
 # Submission Evidence
 
 ## GitHub Repository
@@ -13,30 +12,27 @@ https://github.com/vbhargavkumarreddy/udacity-build-cicd-project
 ## GitHub Actions — Successful Runs
 
 ### Backend Continuous Integration
-**Backend_CD.png
 
-Screenshots/Backend_CI.png
-
+![Backend CI](Screenshots/Backend_CI.png)
 
 ### Backend Continuous Deployment
 
-![Backend CD](screenshots/Backend_CD.png)
+![Backend CD](Screenshots/Backend_CD.png)
 
 ### Frontend Continuous Integration
 
-![Frontend CI](screenshots/Frontend_CI.png)
+![Frontend CI](Screenshots/Frontend_CI.png)
 
 ### Frontend Continuous Deployment
 
-![Frontend CD](screenshots/Frontend_CD.png)
+![Frontend CD](Screenshots/Frontend_CD.png)
 
 ## Application Evidence
 
-### Backend API
+### Backend Application
 
-![Backend Application](screenshots/backend_app_otp.png)
+![Backend Output](Screenshots/Backend_output.png)
 
 ### Frontend Application
 
-![Frontend Application](screenshots/frontend_app_otp.png)
-EOF
+![Frontend Output](Screenshots/Frontend_output.png)
