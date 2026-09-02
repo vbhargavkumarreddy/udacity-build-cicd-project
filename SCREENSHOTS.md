@@ -14,7 +14,7 @@ https://github.com/vbhargavkumarreddy/udacity-build-cicd-project
 
 ### Backend Continuous Integration
 
-![Backend CI](screenshots/Backend_CI.png)
+Backend_CD.png
 
 ### Backend Continuous Deployment
 
